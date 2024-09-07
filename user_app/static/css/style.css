@@ -41,51 +41,55 @@ main {
 
 main header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: 3em 10em 0 10em;
+    padding: 1em 5em 0 5em;
+}
+
+
+
+header .decorative-line {
+    height: 2px;
+    background: linear-gradient(to right, violet, rgb(40, 145, 61), violet);
+    /* Space between the line and the navigation */
+    width: 100%;
+    /* Make sure the line spans the full width */
+    position: absolute;
+    /* Absolute positioning within header */
+    top: 8em;
+    /* Adjust according to your layout */
+    left: 0;
+    /* Align to the left */
+}
+
+header .navigations {
+    margin-top: 2em;
+    /* Space from the line to the navigation links */
 }
 
 main header .navigations {
     display: flex;
-    align-items: end;
-    gap: 1em;
+    align-items: flex-end;
+    gap: 5em;
+
 }
 
 main header .navigations a {
     color: rgb(0, 0, 0);
-    font-size: 1.5em;
+    font-size: 1.8em;
+    white-space: nowrap;
+    /* Prevents text wrapping */
 }
 
 main header .navigations a:hover {
     font-weight: 600;
-    transition: 0.1s;
-    border-bottom: 0.2em solid black;
+    transition: 0.1s ease;
+    color: #28a745;
+
+
 }
 
-main .content {
-    padding: 1em 10em 1em 10em;
-}
-
-main .content .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4em;
-    padding: 15em 0 0 0;
-}
-
-main .content .home img {
-    border-radius: 100em;
-    width: 40em;
-    height: 40em;
-    object-fit: cover;
-}
-
-main .content .home h1 {
-    font-size: 10em;
-}
 
 main header .labels {
     display: flex;
@@ -94,11 +98,12 @@ main header .labels {
     width: 100%;
     font-size: 2em;
     font-weight: 600;
+    color: rgb(57, 133, 28);
 }
 
 main header .labels .name img {
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
 }
 
 main header .labels .name {
@@ -108,10 +113,75 @@ main header .labels .name {
 }
 
 
+main .content .home {
+    display: flex;
+    flex-direction: row;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    gap: 2em;
+    /* Adjust spacing between items as needed */
+    padding: 15em 0 0 0;
+}
+
+main .content .home img {
+    flex-direction: row;
+    border-radius: 100em;
+    width: 40em;
+    height: 40em;
+    object-fit: cover;
+}
+
+main .content .home h1 {
+    font-size: 8em;
+    text-align: left;
+    /* Center align text */
+    line-height: 1.2;
+    /* Adjust line height if needed */
+    margin: 0;
+    /* Remove default margin */
+}
+
+main .content p {
+    font-size: 2em;
+    text-align: left;
+    margin-top: -4.6em;
+    margin-left: 13.5em;
+    line-height: 1.5;
+    /* Adjust line height for better readability */
+    color: #888888;
+    /* Adjust color if needed */
+}
+
+.get-started-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.54em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* Adjust as needed */
+    margin-left: 17.3em;
+    display: inline-block;
+
+}
+
+.get-started-button:hover {
+    background-color: #218838;
+}
+
+
 footer {
     margin-top: auto;
     text-align: center;
     padding: 1em;
     font-size: 1.5em;
     font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 133, 28);
+
 }
