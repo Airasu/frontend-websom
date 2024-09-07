@@ -1,5 +1,17 @@
+{% extends 'base.html' %}
 
-{% extends "base.html" %}
-{% load static %}
+{% block title %}Login{% endblock %}
+
 {% block content %}
-{% endblock content %}
+
+
+<h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+
+
+
+{% endblock %}
