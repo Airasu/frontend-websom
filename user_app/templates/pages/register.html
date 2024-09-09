@@ -4,14 +4,15 @@
 
 {% block content %}
 
-
-<h2>Register</h2>
+<div class="register-container">
+    <h2>Register</h2>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Register</button>
+            <button type="submit" <a href="{% url 'Index' %}">Confirm</a></button>
         </form>
 
+</div>
 
 
 {% endblock %}

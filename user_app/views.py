@@ -10,3 +10,8 @@ class Register(TemplateView):
 class Signin(TemplateView):
     template_name = "pages/signin.html"
 
+class Dashboard(TemplateView):
+    template_name = "pages/dashboard.html"
+
+class Index(TemplateView):
+    template_name = "pages/index.html"
