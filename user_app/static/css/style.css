@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
 
 * {
     padding: 0;
@@ -6,13 +6,16 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
 
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: x-small;
     display: flex;
+    font-weight: 300;
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -50,22 +53,16 @@ main header {
 
 
 header .decorative-line {
-    height: 2px;
-    background: linear-gradient(to right, violet, rgb(40, 145, 61), violet);
-    /* Space between the line and the navigation */
+    height: .5px;
+    background: rgb(173, 172, 172);
     width: 100%;
-    /* Make sure the line spans the full width */
     position: absolute;
-    /* Absolute positioning within header */
     top: 8em;
-    /* Adjust according to your layout */
     left: 0;
-    /* Align to the left */
 }
 
 header .navigations {
     margin-top: 2em;
-    /* Space from the line to the navigation links */
 }
 
 main header .navigations {
@@ -77,15 +74,14 @@ main header .navigations {
 
 main header .navigations a {
     color: rgb(0, 0, 0);
-    font-size: 1.8em;
+    font-size: 1.5em;
     white-space: nowrap;
-    /* Prevents text wrapping */
+    margin-top: -15px;
 }
 
 main header .navigations a:hover {
-    font-weight: 600;
     transition: 0.1s ease;
-    color: #28a745;
+    color: #0aa32e;
 
 
 }
@@ -116,12 +112,9 @@ main header .labels .name {
 main .content .home {
     display: flex;
     flex-direction: row;
-    /* Stack items vertically */
     align-items: center;
-    /* Center items horizontally */
     justify-content: center;
     gap: 2em;
-    /* Adjust spacing between items as needed */
     padding: 15em 0 0 0;
 }
 
@@ -136,11 +129,8 @@ main .content .home img {
 main .content .home h1 {
     font-size: 8em;
     text-align: left;
-    /* Center align text */
     line-height: 1.2;
-    /* Adjust line height if needed */
     margin: 0;
-    /* Remove default margin */
 }
 
 main .content p {
@@ -149,22 +139,20 @@ main .content p {
     margin-top: -4.6em;
     margin-left: 13.5em;
     line-height: 1.5;
-    /* Adjust line height for better readability */
     color: #888888;
-    /* Adjust color if needed */
+
 }
 
 .get-started-button {
     background-color: #28a745;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
     font-size: 1.54em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    /* Adjust as needed */
     margin-left: 17.3em;
     display: inline-block;
 
@@ -178,39 +166,54 @@ main .content p {
 .sign-in-container {
     display: flex;
     flex-direction: column;
-    font-family: "Inter", sans-serif;
-    color: black;
+    font-family: "poppins", sans-serif;
+    color: rgb(24, 23, 23);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 25px;
     text-align: center;
     font-size: 15px;
     width: 30rem;
     margin: auto;
     position: relative;
     top: 10rem;
-    margin-bottom: 36.5rem;
+    margin-bottom: 47.1rem;
     gap: 20px;
+    border: #0aa32e;
 }
 
 
 .form-group input {
-    color: #fff;
+    color: #2b2b2b;
     border-color: #D9D9D9;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 10px;
     width: 20rem;
 
 }
 
 
+.form-group-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    width: 20rem;
 
-.form-group-button:hover {
+}
+
+button:hover {
     background-color: #218838;
 }
 
@@ -222,67 +225,5 @@ footer {
     font-size: 1.5em;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    background-color: rgb(57, 133, 28);
-
-}
-
-.register-container {
-    display: flex;
-    flex-direction: column;
-    font-family: "Inter", sans-serif;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 15px;
-    width: 30rem;
-    margin: auto;
-    position: relative;
-    top: 10rem;
-    gap: 20px;
-}
-
-.form-group-button {
-    background-color: #28a745;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-    width: 20rem;
-    border-radius: 10px;
-}
-
-.form-group-button a {
-    color: white;
-}
-
-.navbar {
-    display: flex;            
-    flex-direction: column;     
-    justify-content: flex-start; 
-    align-items: flex-start;    
-    gap: 1em;                  
-    padding: 1em;            
-    width: 25em; 
-    font-size: 20px;
-    font-family: "Inter", sans-serif;
-                
-  }
-
-
-.container {
-    width: 25em; 
-    min-height: 100vh; 
-    background-color: #fff;
-    box-shadow: 0 0 5px black;
-    position: fixed; 
-    left: 0; 
-    top: 0; 
-    z-index: 1; 
-    margin-left: 0;
+    background-color: rgb(25, 59, 11);
 }
