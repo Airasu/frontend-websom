@@ -1,4 +1,4 @@
-@import url('https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
 
 * {
     padding: 0;
@@ -7,32 +7,39 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
-
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     font-size: x-small;
     display: flex;
-    font-weight: 300;
     flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 
-.background-image-container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+button,
+.register-button,
+.form-group-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    width: 20rem;
 }
 
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+button:hover,
+.get-started-button:hover,
+.register-button:hover,
+.form-group-button:hover {
+    background-color: #218838;
 }
+
 
 main {
     backdrop-filter: blur(100px);
@@ -47,10 +54,8 @@ main header {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: 1em 5em 0 5em;
+    padding: 1em 5em 0;
 }
-
-
 
 header .decorative-line {
     height: .5px;
@@ -63,31 +68,25 @@ header .decorative-line {
 
 header .navigations {
     margin-top: 2em;
-}
-
-main header .navigations {
     display: flex;
     align-items: flex-end;
     gap: 5em;
-
 }
 
-main header .navigations a {
+header .navigations a {
     color: rgb(0, 0, 0);
     font-size: 1.5em;
+    font-weight: bolder;
     white-space: nowrap;
     margin-top: -15px;
+    transition: color 0.1s ease;
 }
 
-main header .navigations a:hover {
-    transition: 0.1s ease;
+header .navigations a:hover {
     color: #0aa32e;
-
-
 }
 
-
-main header .labels {
+header .labels {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,17 +96,16 @@ main header .labels {
     color: rgb(57, 133, 28);
 }
 
-main header .labels .name img {
+header .labels .name img {
     width: 3em;
     height: 3em;
 }
 
-main header .labels .name {
+header .labels .name {
     display: flex;
     align-items: center;
     gap: 0.5em;
 }
-
 
 main .content .home {
     display: flex;
@@ -115,11 +113,10 @@ main .content .home {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    padding: 15em 0 0 0;
+    padding: 15em 0 0;
 }
 
 main .content .home img {
-    flex-direction: row;
     border-radius: 100em;
     width: 40em;
     height: 40em;
@@ -130,43 +127,46 @@ main .content .home h1 {
     font-size: 8em;
     text-align: left;
     line-height: 1.2;
-    margin: 0;
+    align-items: center;
+    font-weight: 200;
 }
 
 main .content p {
     font-size: 2em;
     text-align: left;
     margin-top: -4.6em;
-    margin-left: 13.5em;
+    margin-left: 16.2em;
     line-height: 1.5;
     color: #888888;
-
 }
 
-.get-started-button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
+
+.form-group input,
+.form-group select {
+    color: #707070;
+    border-color: #c4c4c4;
+    border-radius: 10px;
     padding: 10px 20px;
-    font-size: 1.54em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
-    margin-left: 17.3em;
     display: inline-block;
-
+    margin-top: 15px;
+    width: 20rem;
 }
 
-.get-started-button:hover {
-    background-color: #218838;
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: #28a74691;
+    outline: none;
 }
 
-
-.sign-in-container {
+.sign-in-container,
+.register-container,
+.profile-container {
     display: flex;
     flex-direction: column;
-    font-family: "poppins", sans-serif;
     color: rgb(24, 23, 23);
     padding: 10px;
     border-radius: 25px;
@@ -181,43 +181,6 @@ main .content p {
     border: #0aa32e;
 }
 
-
-.form-group input {
-    color: #2b2b2b;
-    border-color: #D9D9D9;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 15px;
-    border-radius: 10px;
-    width: 20rem;
-
-}
-
-
-.form-group-button {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-    width: 20rem;
-
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-
 footer {
     margin-top: auto;
     text-align: center;
@@ -226,4 +189,61 @@ footer {
     font-weight: 600;
     color: rgb(255, 255, 255);
     background-color: rgb(25, 59, 11);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-size: 1.54em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 18em;
+    font-size: 1.8em;
+    cursor: pointer;
+    width: 8em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+}
+
+.dropbtn:hover {
+    background-color: #218838;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 10rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 8;
+    top: 25%;
+    left: 100%;
+    margin-left: 1px;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5em;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

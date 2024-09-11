@@ -7,6 +7,9 @@ class Home(TemplateView):
 class Register(TemplateView):
     template_name = "pages/register.html"
 
+class Register2(TemplateView):
+    template_name = "pages/register2.html"
+
 class Signin(TemplateView):
     template_name = "pages/signin.html"
 
@@ -15,3 +18,5 @@ class Dashboard(TemplateView):
 
 class Index(TemplateView):
     template_name = "pages/index.html"
+
+

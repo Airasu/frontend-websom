@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+
+<div class="edit-profile">
+    <div class="profile-container">
+        <h1>Edit Profile</h1>
+        <form action="/register" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" id="nfc_id" name="nfc_id" placeholder="NFC ID" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="student_no" name="student_no" placeholder="Student no" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+            </div>
+        
+            <div class="form-group">
+                <input type="text" id="first_name" name="first_name" placeholder="Firstname" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="middle_name" name="middle_name" placeholder="Middle name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="sex"></label>
+                <select id="sex" name="sex" required>
+                    <option value="" disabled selected>Sex</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="dob" name="dob" placeholder="Date of birth" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="year_level" name="year_level" placeholder="Year level" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="address" name="address" placeholder="Address" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="sport" name="sport" placeholder="Sport" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="esport" name="esport" placeholder="Esport" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="talent" name="talent" placeholder="Talent" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="hobbie" name="hobbie" placeholder="Hobbie" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="interest" name="interest" placeholder="Interest" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="emer_person" name="emer_person" placeholder="Emergency contact person" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="emer_relation" name="emer_relation" placeholder="Relation to emergency contact" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="emer_no" name="emer_no" placeholder="Emergency no." required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="form-group-button"><a href="{% url "Index" %}">Confirm</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
