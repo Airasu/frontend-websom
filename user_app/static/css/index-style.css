@@ -1,0 +1,67 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: black;
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+  }
+  
+  .avatar-lg {
+    margin-right: 10px; 
+  }
+  
+  .avatar-img {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover; 
+  }
+  
+  .username {
+    margin-top: 5%;
+    font-size: 16px; 
+    color: #333; 
+  }
+  
+  .username p {
+    margin: 0; 
+  }
+
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1em;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 59, 11);
+    height: 55px;
+}
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .sidebar:hover {
+    background-color: white; 
+  }
+  
+  
+  .sidebar .nav-item a {
+    color: #333; 
+    padding: 10px 15px; 
+    display: block;
+    transition: background-color 0.3s, color 0.3s ease; 
+  }
+  
+  .sidebar .nav-item a:hover {
+    background-color: #108A00; 
+    color: white;
+    border-radius: 20px;
+  }
+

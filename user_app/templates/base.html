@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="{% static "/css/style.css" %}">
 </head>
 <body>
+    <div class="background-image-container">
+    <img src="{% static '/images/bg.gif' %}" alt="Background Image" class="background-image">
+    </div>
     <main>
         <header>
+            <div class="labels">
+                <label class="name">
+                <img src="{% static "images/logo.png" %}" alt="profile" class="logo">
+SITE</label>
+
+            </div>
+            <div class="decorative-line"></div>
             <div class="navigations">
                 <a href="{% url "home" %}">Home</a>
                 <a href="{% url "Register" %}">Register</a>
                 <a href="{% url "Signin" %}">Sign in</a>
             </div>
-            <div class="labels">
-                <label class="name">
-                <img src="{% static "images/logo.png" %}" alt="profile" class="logo">
-SITE</label>
-                <label class="date">2024</label>
-            </div>
+        <div class="decorative-line"></div>
         </header>
         <div class="content">
             {% block content %}
             {% endblock content %}
         </div>
         <footer>
-            WEBSOM 2024
+           SITE 2024
         </footer>
     </main>
 </body>

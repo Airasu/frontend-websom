@@ -1,5 +1,18 @@
+{% extends 'base.html' %}
 
-{% extends "base.html" %}
-{% load static %}
+{% block title %}Login{% endblock %}
+
 {% block content %}
-{% endblock content %}
+
+<div class="register-container">
+    <h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit"><a href="{% url "Index" %}">Confirm</a></button>
+        </form>
+
+</div>
+
+
+{% endblock %}
