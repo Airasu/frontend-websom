@@ -19,4 +19,8 @@ class Dashboard(TemplateView):
 class Index(TemplateView):
     template_name = "pages/index.html"
 
+    
+class Members_card(TemplateView):
+    template_name = "pages/members_card.html"
+
 
