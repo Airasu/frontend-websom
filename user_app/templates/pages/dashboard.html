@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="page-inner">
+      <div class="page-header">
+        <h4 class="page-title">Dashboard</h4>
+      </div>
+      <div class="page-category">
+        <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Notifications</div>
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas
+                    id="doughnutChart"
+                    style="width: 50%; height: 50%"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Monthly Sales Report</div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container">
+                    <canvas
+                      id="doughnutChart"
+                      style="width: 50%; height: 50%"
+                    ></canvas>
+                  </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Member Statistics</div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container">
+                    <canvas
+                      id="doughnutChart"
+                      style="width: 50%; height: 50%"
+                    ></canvas>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock content %} 

@@ -85,13 +85,27 @@
             <ul class="nav nav-secondary">
               <li class="nav-item active">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{% url "Dashboard" %}"
                   class="collapsed"
-                  aria-expanded="false"
                 >
                   <i class="fas fa-home"></i>
                   <p>Dashboard</p>                </a>
+                  <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#base">
+                      <i class="fas fa-calendar-alt"></i>
+                      <p>Announcements</p>
+                      <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="base">
+                      <ul class="nav nav-collapse">
+                        <li>
+                          <a href="{% url "CreateAnnouncement" %}">
+                            <span class="sub-item">Create Announcements</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
                 <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
@@ -100,7 +114,7 @@
                 </li>
   <!-- Members Toggle -->
   <li class="nav-item">
-  <a data-bs-toggle="collapse" href="#submenu" aria-expanded="false">
+  <a data-bs-toggle="collapse" href="#submenu">
   <i class="fas fa-user"></i>
   <p>Members</p>
   <span class="caret"></span>
@@ -189,8 +203,18 @@
                   <div class="collapse" id="maps">
                     <ul class="nav nav-collapse">
                       <li>
-                        <a href="{% url "ClearanceStatus" %}">
-                          <span class="sub-item">Status</span>
+                        <a href="{% url "ClearancePage1" %}">
+                          <span class="sub-item">Page 1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{% url "ClearancePage2" %}">
+                          <span class="sub-item">Page 2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{% url "ClearancePage3" %}">
+                          <span class="sub-item">Page 3</span>
                         </a>
                       </li>
                     </ul>
@@ -252,6 +276,10 @@
         </div>  
       </div>
     </div>
+
+    <!---Dashboard Feature-->
+
+
     <!--   Core JS Files   -->
     {% load static %}
     <script src="{% static 'assets/js/core/jquery-3.7.1.min.js' %}"></script>

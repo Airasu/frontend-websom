@@ -10,9 +10,6 @@ class Register(TemplateView):
 class Signin(TemplateView):
     template_name = "pages/signin.html"
 
-class Announcement(TemplateView):
-    template_name = "pages/announcement.html"
-
 class Linked(TemplateView):
     template_name = "pages/linked.html"
 
@@ -37,8 +34,8 @@ class Transactions(TemplateView):
 class Products(TemplateView):
     template_name ="pages/products.html"
 
-class ClearanceStatus(TemplateView):
-    template_name = "pages/clearance_status.html"
+class ClearancePage1(TemplateView):
+    template_name = "pages/clearance_page1.html"
 
 class Archive(TemplateView):
     template_name ="pages/archive.html"
@@ -48,3 +45,15 @@ class Reports(TemplateView):
 
 class Settings(TemplateView):
     template_name ="pages/settings.html"
+
+class Announcement(TemplateView):
+    template_name ="pages/create_announcements.html"
+
+class Dashboard(TemplateView):
+    template_name ="pages/dashboard.html"
+
+class ClearancePage2(TemplateView):
+    template_name ="pages/clearance_page2.html"
+
+class ClearancePage3(TemplateView):
+    template_name ="pages/clearance_page3.html"
