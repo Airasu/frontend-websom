@@ -195,7 +195,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a data-bs-toggle="collapse" href="#maps">
+                  <a data-bs-toggle="collapse" href="#maps" aria-expanded="false">
                     <i class="fas fa-tasks"></i>
                     <p>Clearance Records</p>
                     <span class="caret"></span>
@@ -316,6 +316,55 @@
 
     <!-- Kaiadmin JS -->
     <script src="{% static 'assets/js/kaiadmin.min.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dropdowns = ['submenu', 'base', 'forms', 'tables', 'maps'];
+      
+          // Check saved state and restore dropdowns
+          dropdowns.forEach(function (id) {
+            const element = document.getElementById(id);
+            if (localStorage.getItem(`${id}Open`) === 'true') {
+              element.classList.add('show');
+            }
+          });
+      
+          // Close all dropdowns
+          function closeAllDropdowns(exceptId) {
+            dropdowns.forEach(function (id) {
+              const element = document.getElementById(id);
+              if (id !== exceptId) {
+                element.classList.remove('show');
+                localStorage.setItem(`${id}Open`, 'false');
+              }
+            });
+          }
+      
+          // Handle click event for each dropdown toggle
+          document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (element) {
+            element.addEventListener('click', function (event) {
+              event.preventDefault(); // Prevent default anchor behavior
+      
+              const targetId = element.getAttribute('href').replace('#', '');
+              const targetElement = document.getElementById(targetId);
+              const isOpen = targetElement.classList.contains('show');
+      
+              // Close other dropdowns
+              closeAllDropdowns(targetId);
+      
+              // Toggle the clicked dropdown and save its state
+              if (!isOpen) {
+                targetElement.classList.add('show');
+                localStorage.setItem(`${targetId}Open`, 'true');
+              } else {
+                targetElement.classList.remove('show');
+                localStorage.setItem(`${targetId}Open`, 'false');
+              }
+            });
+          });
+        });
+      </script>
+      
 
   </body>
 </html>

@@ -1,5 +1,7 @@
-body {
-    font-family: "Poppins", sans-serif;
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -85,3 +87,181 @@ body {
 .sidebar .nav-item p:hover {
     color: #ffffff
 }
+
+/* Custom sidebar styles for dropdowns */
+.sidebar .nav .nav-item .collapse {
+    display: none; /* Hidden initially */
+  }
+  
+  .sidebar .nav .nav-item .collapse.show {
+    display: block; /* Shown when 'show' class is added */
+  }
+  
+  
+  .sidebar .nav-item .caret {
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar .nav-item .collapse + .caret {
+    transform: rotate(0deg);
+  }
+  
+  .sidebar .nav-item .collapse.show + .caret {
+    transform: rotate(90deg);
+  }
+
+  .col-md-12 {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 20px;
+    gap: 5em;
+  }
+
+  .sort_by_container {
+    background-color: white;  
+    width: fit-content; 
+    border-radius: 10px;
+    padding: 20px; 
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add_attendance {
+    margin-bottom: 3em;
+    margin-left: 90em;
+}
+
+.row1 {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 20px;
+    gap: 60em;
+}
+
+.row1 label {
+    font-weight: bold;
+}
+
+.sort_by_container p {
+    font-weight: bold;
+}
+
+
+.page-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    width: 120em;
+    margin: 0 auto;
+}
+
+
+button {
+    margin: 5px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
+.create-event-container {
+    background-color: white;
+    width: 100em;   
+    border-radius: 10px;
+    padding: 20px; 
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-name {
+    margin-left: 0.5em;
+}
+
+.event-name p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.event-details {
+    margin-left: 0.5em;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+}
+
+.event-details p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.event-details input {
+    width: 90em;
+    height: 5em;
+}
+
+.add-new-attendance button {
+    margin-left: 85em;
+}
+
+
+.event-container {
+    margin-top: 3em;
+    width: 30em;
+    height: 20em;
+    border-radius: 10px;
+    background-color: white;   
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event1 {
+    margin-left: 5px;
+    
+}
+
+.event1 p {
+    color: black;
+    border-radius: 5px;
+    width: fit-content;
+    height: 2em;
+}
+
+.events {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 20px;
+    gap: 5em;
+  }
+  
+.event-container p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.details p{
+    font-weight: lighter;
+}
+
+.event-days {
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
