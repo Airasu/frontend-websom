@@ -1,0 +1,15 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block content %}
+  <h2>Add New Member</h2>
+  <form method="post">
+    {% csrf_token %}
+    <h3>User Information</h3>
+    {{ user_form.as_p }}
+
+    <h3>Profile Information</h3>
+    {{ profile_form.as_p }}
+
+    <button type="submit">Add Member</button>
+  </form>
+{% endblock %}

@@ -1,5 +1,12 @@
 from django.urls import path
-from .views import Home, Register, Signin, Dashboard, Register2, Membership_card, Announcement, Linked, MembersReactivation, MembersModification, MembershipCard, Attendance, Events, Transactions, Products, ClearanceStatus, Archive, Reports, Settings
+from .views import Home, Register, Signin, Dashboard, Register2, Membership_card, Announcement, Linked, MembersReactivation, MembersModification, MembershipCard, Attendance, Events, Transactions, Products, ClearanceStatus, Archive, Reports, Settings, Index
+from django.contrib.auth import views as auth_views
+from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
 
 urlpatterns = [
     path("", Home.as_view(), name="home"),
@@ -18,6 +25,9 @@ urlpatterns = [
     path("clearance_status", ClearanceStatus.as_view(), name="ClearanceStatus"),
     path("archive", Archive.as_view(), name="Archive"),
     path("reports", Reports.as_view(), name="Reports"),
-    path("settings", Settings.as_view(), name="Settings")
-]
+    path("settings", Settings.as_view(), name="Settings"),
+    
+    path('index/', views.Index, name='Index'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+
 
