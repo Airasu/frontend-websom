@@ -85,7 +85,7 @@
               <li class="nav-item active">
                 <a
 
-                  href="{% url "Dashboard" %}"
+                  href="{% url "o_dashboard" %}"
                   class="collapsed"
                 >
                   <i class="fas fa-home"></i>
@@ -129,7 +129,7 @@
           <div class="collapse" id="subnav1">
               <ul class="nav nav-collapse subnav">
                   <li>
-                      <a href="{% url "MembersReactivation" %}">
+                      <a href="{% url "o_reactivate_member" %}">
                           <span class="sub-item">Reactivate</span>
                       </a>
                   </li>
@@ -161,7 +161,7 @@
                   <div class="collapse" id="forms">
                     <ul class="nav nav-collapse">
                       <li>
-                        <a href="{% url "Attendance" %}">
+                        <a href="{% url "o_attendance" %}">
                           <span class="sub-item">Attendance</span>
                         </a>
                       </li>
@@ -203,18 +203,18 @@
                   <div class="collapse" id="maps">
                     <ul class="nav nav-collapse">
                       <li>
-                        <a href="{% url "ClearancePage1" %}">
-                          <span class="sub-item">Page 1</span>
+                        <a href="{% url "o_clearance_clearance" %}">
+                          <span class="sub-item">Clearance</span>
                         </a>
                       </li>
                       <li>
-                        <a href="{% url "ClearancePage2" %}">
-                          <span class="sub-item">Page 2</span>
+                        <a href="{% url "o_clearance_rec_processing" %}">
+                          <span class="sub-item">Processing</span>
                         </a>
                       </li>
                       <li>
-                        <a href="{% url "ClearancePage3" %}">
-                          <span class="sub-item">Page 3</span>
+                        <a href="{% url "o_clearance_rec_requirements" %}">
+                          <span class="sub-item">Requirements</span>
                         </a>
                       </li>
                     </ul>

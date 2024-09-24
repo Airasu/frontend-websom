@@ -1,0 +1,375 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="page-inner">
+      <div class="page-header">
+        <h4 class="page-title">Dashboard</h4>
+      </div>
+      <div class="page-category">
+        <p>CLEARANCE PAGE</p>
+          <div class="clearance-rec-clearance-filter">
+            <div class="clearance-rec-clearance-filter-header">
+              <div class="clearance-rec-clearance-type">
+                <label for="choose-type">Type:</label>
+                <select id="choose-type" name="choose-type">
+                    <option value="attendance">Attendance</option>
+                    <optgroup label="Transaction">
+                        <option value="igp">IGP</option>
+                        <option value="fee">Fee</option>
+                        <option value="fines">Fines</option>
+                    </optgroup>
+                    <option value="sanction">Sanction</option>
+                </select>
+              </div>
+            </div>
+            <div class="att-sortby">
+              <p>Sort By:</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  A-Z
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Z-A
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Date
+                </label>
+              </div>
+            </div>
+            <div class="clearance-rec-clearance-view-all-records">
+              <button id="view-all-records-btn">View All Records</button>
+            </div>  
+          </div>
+          <div class="clearance-rec-clearance-records">
+            <div class="card-body">
+              <div id="attendance-results" class="result-section">
+                <div class="result-section-header">
+                  <h5>Attendance Records</h5>
+                  <div class="attendance-results-choose-event">
+                    <label for="choose-event">Choose Event</label>
+                    <select id="choose-event" name="choose-event">
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Log-in Am</th>
+                          <th></th>
+                          <th scope="col">Log-out Am</th>
+                          <th></th>
+                          <th scope="col">Log-in Pm</th>
+                          <th></th>
+                          <th scope="col">Log-out Pm</th>
+                          <th></th>
+                      </tr>
+                      <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                      </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="igp-results" class="result-section">
+                <div class="result-section-header">
+                  <h5>IGP Results</h5>
+                  <div class="attendance-results-choose-event">
+                    <label for="choose-item">Choose Item</label>
+                    <select id="item" name="choose-item">
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">No. Purchase</th>
+                          <th scope="col">Amount</th>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col">Total:</th>
+                      <th scope="col">Total:</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>1</td>
+                      <td>500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>1</td>
+                      <td>500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>1</td>
+                      <td>500.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="fee-results" class="result-section">
+                <div class="result-section-header">
+                  <h5>Fees Results</h5>
+                  <div class="attendance-results-choose-event">
+                    <label for="choose-semester">Choose Semester</label>
+                    <select id="semster" name="choose-semester">
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Amount</th>
+                      </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th>Total:</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>80.00</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>80.00</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>80.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="fines-results" class="result-section">
+                <div class="result-section-header">
+                  <h5>Fines Results</h5>
+                  <div class="attendance-results-choose-event">
+                    <label for="choose-semester">Choose Semester</label>
+                    <select id="semster" name="choose-semester">
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Status</th>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>100.00</td>
+                      <td>Paid</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>100.00</td>
+                      <td>Paid</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>100.00</td>
+                      <td>Paid</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="sanction-results" class="result-section">
+                <h5>Sanction Results</h5>
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Log-in Am</th>
+                          <th></th>
+                          <th scope="col">Log-out Am</th>
+                          <th></th>
+                          <th scope="col">Log-in Pm</th>
+                          <th></th>
+                          <th scope="col">Log-out Pm</th>
+                          <th></th>
+                      </tr>
+                      <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                      </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                      <th>Total:</th>
+                      <th></th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                    </tr>
+                    <tr>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                      <td>Edward Smith</td>
+                      <td>202180345</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Function to show the relevant result section based on selection
+    document.getElementById('choose-type').addEventListener('change', function() {
+      // Hide all result sections
+      document.querySelectorAll('.result-section').forEach(function(section) {
+        section.style.display = 'none';
+      });
+  
+      // Get the selected value
+      var selectedValue = this.value;
+  
+      // Show the corresponding result section
+      if (selectedValue === 'attendance') {
+        document.getElementById('attendance-results').style.display = 'block';
+      } else if (selectedValue === 'igp') {
+        document.getElementById('igp-results').style.display = 'block';
+      } else if (selectedValue === 'fee') {
+        document.getElementById('fee-results').style.display = 'block';
+      } else if (selectedValue === 'fines') {
+        document.getElementById('fines-results').style.display = 'block';
+      } else if (selectedValue === 'sanction') {
+        document.getElementById('sanction-results').style.display = 'block';
+      }
+    });
+  
+    // Function to show all result sections when the "View All Records" button is clicked
+    document.getElementById('view-all-records-btn').addEventListener('click', function() {
+      // Hide the type-specific dropdown selection results
+      document.querySelectorAll('.result-section').forEach(function(section) {
+        section.style.display = 'block'; // Show all records
+      });
+    });
+  
+    // On page load, show all result sections
+    window.addEventListener('load', function() {
+      document.querySelectorAll('.result-section').forEach(function(section) {
+        section.style.display = 'block'; // Show all records initially
+      });
+    });
+  </script>
+{% endblock content %}

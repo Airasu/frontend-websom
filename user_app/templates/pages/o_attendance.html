@@ -1,0 +1,213 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{% static "/css/index-style.css" %}">
+</head>
+<body>
+  <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+    <div class="page-inner">
+      <div class="page-category">
+        <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+          <div class="page-inner">
+            <h1></h1>
+            <div class="add_attendance"> 
+              <a href="{% url "o_attendance_add" %}">
+                <button>Add New Attendance</button>
+              </a>
+            </div>
+            <div class="attendance-header">
+              <h3>Filter</h3>
+            </div>
+            <div class="att-header">
+              <div class="att-semester">
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+              </div>
+              <div class="att-modality">
+                <label for="modality">Modality:</label>
+                <select id="modality" name="modality">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+              </div>
+              <div class="att-logs">
+                <label for="logs">Logs:</label>
+                <select id="logs" name="logs">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+              </div>
+              <div class="att-events">
+                <label for="events">Events:</label>
+                <select id="events" name="events">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select> 
+              </div>
+            </div>
+            <div class="att-sortby">
+              <p>Sort By:</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  A-Z
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Z-A
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Date
+                </label>
+              </div>
+            </div>
+            <div class="members">
+              <div class="member-container">
+                    <div class="Members">
+                      <div class="members-header">
+                          <div class="members-list">Members List</div>
+                      </div>
+                      <div class="row1">
+                        <div class="col-md1">
+                          <div class="data" id="basic-datatables_length">
+                            <label>Show 
+                              <select name="basic-datatables_length" aria-controls="basic-datatables" class="form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                              </select> Entries
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md2">
+                          <div id="basic-datatables_filter" class="dataTables_filter">
+                            <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="basic-datatables"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <table class="table table-hover">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Username</th>
+                                      <th scope="col">Full name</th>
+                                      <th scope="col">Student No.</th>
+                                      <th scope="col">Email address</th>
+                                      <th scope="col">Year</th>
+                                      <th scope="col">Tags</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                   </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                    </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>      
+                                   </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                    </tr>
+                                  <tr>
+                                      <td>Markxx</td>
+                                      <td>Mark John As</td>
+                                      <td>2021-8-0210</td>
+                                      <td>mark@gmail.com</td>
+                                      <td>3rd year</td>
+                                      <td>Athlete</td>
+                                   </tr>
+                              </tbody>
+                            </table>
+                       </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+
+  <!-- jQuery Scrollbar -->
+  <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- Datatables -->
+  <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="../assets/js/kaiadmin.min.js"></script>
+  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+  <script src="../assets/js/setting-demo2.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#basic-datatables").DataTable({});
+    });
+  </script>
+</body>
+{% endblock content %}

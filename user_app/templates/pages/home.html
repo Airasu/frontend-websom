@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "out_base.html" %}
 {% load static %}
 {% block content %}
 <div class="home">
@@ -7,6 +7,6 @@
 </div>
 <div>
     <p>SHOUT IT. EXPLORE IT. LIVE WITH IT</p>
-    <a href="{% url 'Signin' %}" class="get-started-button">Get Started</a>
+    <a href="{% url 'sign_in' %}" class="get-started-button">Get Started</a>
 </div>
 {% endblock content %}

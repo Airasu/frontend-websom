@@ -144,9 +144,6 @@ body, html {
     font-weight: bold;
 }
 
-.sort_by_container p {
-    font-weight: bold;
-}
 
 
 .page-category {
@@ -205,7 +202,8 @@ button {
 }
 
 .add-new-attendance button {
-    margin-left: 85em;
+    margin-left: 95em;
+    margin-top: 5em;
 }
 
 
@@ -253,15 +251,348 @@ button {
     margin-top: 1em;
 }
 
+/* o_attendance filter style */
+
+.att-semester label {
+    font-weight: bold;
+}
+
+.att-semester select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-semester select:focus {
+    border-color: green;
+    background-color: #fff;
+}
+
+.att-modality label {
+    font-weight: bold;
+}
+
+.att-modality select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-modality select:focus {
+    border-color: green;
+    background-color: #fff;
+}
+
+.att-logs label {
+    font-weight: bold;
+}
+
+.att-logs select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-logs select:focus {
+    border-color: green;
+    background-color: #fff;
+}
+
+.att-events label {
+    font-weight: bold;
+    
+}
+
+.att-events select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-events select:focus {
+    border-color: green;
+    background-color: #fff;
+}
+
+.att-header {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 5em;
+}
+
+.att-sortby {
+    margin-top: 1rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20em;
+}
+
+.att-sortby p, label {
+    font-weight: bold;
+    margin-right: 10em;
+}
+
+.filter {
+    font-weight: bold
+}
+/*o_attendance filter style*/
+
+/*start of member list style */
+
+.member-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 99%;
+}
+
+.members-header {
+    margin-bottom: 20px;
+}
+
+.members-list {
+    font-size: 24px;
+    color: #009c27;
+    font-weight: 600;
+}
 
 
+.add-button {
+    background-color: #2ab600;
+    color: white;
+    border: none;
+    font-size: medium;
+    width: 5em;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 10;
+}
 
 
+.action-button:hover {
+    color: #078518;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #01a016;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.card-body {
+    margin-top: 2rem;
+}
+/*end of member list style */
+
+/*add attendance page style*/
+
+.att-add-events label{
+}
+
+.att-add-events select {
+    margin-right: 55em;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-add-log label {
+    margin-top: 1em;
+}
+
+.att-add-log select {
+    margin-right: 55em;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    width: 200px;
+    height: 40px;
+}
+
+.att-add-confirm button {
+    margin-top: 2em;
+    margin-left: 47em;
+    width: 10em;
+    height: 2em;
+}
+
+.att-add-container {
+    background-color: white;
+    width: 60em;   
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.att-add-body-container {
+    background-color: white;
+    width: 80em;   
+    max-width: 100%; 
+    border-radius: 10px;
+    padding: 20px; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20em;
+    gap: 10em;
+}
 
 
-  
+.att-add-scanner-input {
+    font-weight: bold;
+}
+.att-add-scanner-input input {
+    margin-top: 1px;
+}
 
 
+.att-add-body-profile {
+    margin-top: 2em;
+    font-weight: bold;
+}
 
-  
-  
+
+.att-add-body-profile input {
+    background-color: white;
+    height: 30em;
+    width: 30em;
+}
+
+/* Add attendance page style end*/
+
+/* Clearance records -Clearance- page style */
+.clearance-rec-clearance-filter {
+    background-color: white;
+    width: 80em;   
+    max-width: 100%; 
+    border-radius: 10px;
+    padding: 20px; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter input {
+    margin-left: 1rem;
+}
+
+.clearance-rec-clearance-filter-header {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    gap: 20em;
+}
+
+
+.clearance-rec-clearance-choose-event select {
+    width: 10em;
+    height: 30px;
+}
+
+.clearance-rec-clearance-type select {
+    width: 10em;
+    height: 30px;
+}
+
+.clearance-rec-clearance-view-all-records button {
+    margin-left: 65em;
+}
+
+.clearance-rec-clearance-records {
+    width: 100em;
+}
+
+.result-section {
+    margin-top: 4em;
+}
+.result-section h5 {
+    font-weight: bold;
+}
+
+.result-section-header{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    gap: 50em;
+}
+
+.attendance-results-choose-event{
+    margin-bottom: 2em;
+}
+.attendance-results-choose-event select{
+    width: 10em;
+    height: 30px;
+}
+
+
+/* Clearance records -Clearance- page style end */ 
+
+/* clearance records processing page style*/
+.clearance-rec-processing-scanner input {
+    background-color: #078518;
+    margin-top: 1px;
+}
+
+.clearnce-rec-processing-scanner p {
+    margin-bottom: 1px;
+}
+
+.clearance-rec-processing-container {
+    background-color: white;
+    width: 80em;   
+    max-width: 100%; 
+    border-radius: 10px;
+    padding: 20px; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clearance-rec-processing-profile {
+    margin-top: 5em;
+}
+.clearance-rec-processing input {
+    width: 20em;
+    height: 10em;
+}

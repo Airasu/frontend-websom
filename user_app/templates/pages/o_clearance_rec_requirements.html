@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <div class="page-inner">
+    <div class="page-header">
+      <h4 class="page-title">Dashboard</h4>
+    </div>
+    <div class="page-category">
+      <p>CLEARANCE STATUS PAGE 2<p>
+
+        <div id="message"></div>
+    </div>
+  </div>
+</div>
+<script>
+    // Define a condition
+  let showMessage = true;
+
+    // Get the HTML element where the message will be displayed
+  let messageDiv = document.getElementById('message');
+
+    // Conditional logic to show or hide content
+  if (showMessage) {
+      messageDiv.innerHTML = "<p>This message is shown because the condition is true.</p>";
+  } else {
+      messageDiv.innerHTML = "<p>The condition is false, so this content is shown instead.</p>";
+  }
+</script>
+
+{% endblock content %} 
