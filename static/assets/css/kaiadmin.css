@@ -799,7 +799,7 @@ body {
   display: block;
   z-index: 1002;
   color: #ffffff;
-  font-weight: 200;
+  font-weight: 100;
   background: #ffffff;
   -webkit-box-shadow: 4px 4px 10px rgba(27, 66, 19, 0.39);
   -moz-box-shadow: 4px 4px 10px rgba(27, 66, 19, 0.39);
@@ -837,7 +837,7 @@ body {
 .sidebar .user .info a>span,
 .sidebar[data-background-color="white"] .user .info a>span {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 100;
   color: #777;
   display: flex;
   flex-direction: column;
@@ -846,7 +846,7 @@ body {
 .sidebar .user .info a>span .user-level,
 .sidebar[data-background-color="white"] .user .info a>span .user-level {
   color: #555;
-  font-weight: 600;
+  font-weight: 100;
   font-size: 12px;
   margin-top: 5px;
 }
@@ -911,7 +911,7 @@ body {
   padding: 2px 30px;
   font-size: 12px;
   color: #0d3a11;
-  font-weight: 600;
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
@@ -934,15 +934,16 @@ body {
   background: #0a740a;
 }
 
+/*dashboard style */
 .sidebar .nav>.nav-item.active>a p,
 .sidebar[data-background-color="white"] .nav>.nav-item.active>a p {
-  color: #0a740a !important;
-  font-weight: 600;
+  color: #262726 !important;
+  font-weight: 100;
 }
 
 .sidebar .nav>.nav-item.active:hover>a:before,
 .sidebar[data-background-color="white"] .nav>.nav-item.active:hover>a:before {
-  background: #0a740a;
+  background: #168108;
 }
 
 .sidebar .nav>.nav-item.active a i,
@@ -965,10 +966,10 @@ body {
   display: flex;
   align-items: center;
   color: #333333;
-  padding: 6px 25px;
+  padding: 6px 28px;
   width: 100%;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: lighter;
   position: relative;
   margin-bottom: 3px;
   text-decoration: none !important;
@@ -981,11 +982,12 @@ body {
   text-decoration: none;
 }
 
+/* sidebar text hover */
 .sidebar .nav>.nav-item a:hover p,
 .sidebar[data-background-color="white"] .nav>.nav-item a:hover p,
 .sidebar[data-background-color="white"] .nav>.nav-item a:focus p {
   color: #ffffff !important;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .sidebar .nav>.nav-item a:hover i,
@@ -1004,7 +1006,7 @@ body {
   vertical-align: middle;
   float: left;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .sidebar .nav>.nav-item a i,
@@ -1024,13 +1026,14 @@ body {
   font-size: 20px;
 }
 
+/* sidebar font styles */
 .sidebar .nav>.nav-item a p,
 .sidebar[data-background-color="white"] .nav>.nav-item a p {
   font-size: 1rem;
   margin-bottom: 0px;
   margin-right: 5px;
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .sidebar .nav>.nav-item a .caret,
@@ -1811,19 +1814,7 @@ body {
     display: none;
   }
 
-  .sidebar_minimize.sidebar_minimize_hover .sidebar {
-    width: 265px;
-    position: fixed;
-    height: 100vh;
-    top: 0;
-  }
 
-  .sidebar_minimize.sidebar_minimize_hover .sidebar .logo-header {
-    width: 265px;
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: left;
-  }
 
   .sidebar_minimize.sidebar_minimize_hover .sidebar .logo-header .logo {
     opacity: 1 !important;

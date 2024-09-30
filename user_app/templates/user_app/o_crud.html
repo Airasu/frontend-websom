@@ -1,0 +1,254 @@
+<body>
+   <div class="title_page">
+        <h1>CRUD MEMBERS</h1>
+        <div class="add-button">
+          <button type="button" class="add-button">Add</button>
+        </div>
+   </div>
+   <div class="att-header">
+      <div class="filter-title">
+        Filter
+      </div>
+          <div class="dropdown">
+        <label>Semester:</label>
+        <div class="toggle-button">Select Semester</div>
+        <div class="options">
+            <input type="checkbox" id="sem1" value="1st">
+            <label for="sem1">1st Semester</label><br>
+            <input type="checkbox" id="sem2" value="2nd">
+            <label for="sem2">2nd Semester</label>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <label>Modality:</label>
+        <div class="toggle-button">Select Modality</div>
+        <div class="options">
+            <input type="checkbox" id="online" value="online">
+            <label for="online">Online</label><br>
+            <input type="checkbox" id="face_to_face" value="face-to-face">
+            <label for="face_to_face">Face to Face</label>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <label>Logs:</label>
+        <div class="toggle-button">Select Logs</div>
+        <div class="options">
+            <input type="checkbox" id="am_time_in" value="am_time_in">
+            <label for="am_time_in">AM Time In</label><br>
+            <input type="checkbox" id="am_time_out" value="am_time_out">
+            <label for="am_time_out">AM Time Out</label><br>
+            <input type="checkbox" id="pm_time_in" value="pm_time_in">
+            <label for="pm_time_in">PM Time In</label><br>
+            <input type="checkbox" id="pm_time_out" value="pm_time_out">
+            <label for="pm_time_out">PM Time Out</label>
+        </div>
+    </div>
+    <div class="dropdown">
+        <label>Event:</label>
+        <div class="toggle-button">Select Event</div>
+        <div class="options">
+            <input type="checkbox" id="general_assembly" value="general_assembly">
+            <label for="general_assembly">General Assembly</label><br>
+            <input type="checkbox" id="general_cleaning" value="general_cleaning">
+            <label for="general_cleaning">General Cleaning</label>
+        </div>
+    </div>
+            <div class="att-sortby">
+              <p>Sort By:</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  A-Z
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Z-A
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Date
+                </label>
+              </div>
+            </div>
+    <div class="members">
+    <div class="member-container">
+        <div class="Members">
+            <div class="members-header">
+                <div class="members-list">Members List</div>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Full name</th>
+                            <th scope="col">Student No.</th>
+                            <th scope="col">Email address</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Tags</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>                        </tr>
+                        <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                        <td>
+                            <button class="action-button edit-button" aria-label="Edit Member">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-button delete-button" aria-label="Delete Member">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.edit-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const row = button.closest('tr');
+            const username = row.children[0].innerText;
+            // Implement your edit functionality here
+            alert(`Edit member: ${username}`);
+        });
+    });
+
+    document.querySelectorAll('.delete-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const row = button.closest('tr');
+            const username = row.children[0].innerText;
+            if (confirm(`Are you sure you want to delete ${username}?`)) {
+                row.remove(); // Remove the row from the table
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+</body>
+</html>
+{% endblock content %}

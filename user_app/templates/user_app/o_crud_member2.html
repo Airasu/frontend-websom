@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<head>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container"> <!-- Container for the entire content -->
+    <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+      <div class="page-inner">
+        <div class="page-category">
+          <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+            <div class="page-inner">
+                <div class="title_page">
+                    <h1>Add member</h1>
+                <div class="add-member-container"> <!-- New container to wrap the entire content -->
+                    <div class="member-forms">
+                        <form action="" method="POST">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter username">
+
+                        <label for="fullname">Full name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter full name">
+
+                        <label for="studentno">Student No.:</label>
+                        <input type="text" id="studentno" name="studentno" placeholder="Enter student number">
+
+                        <label for="email">Email address:</label>
+                        <input type="text" id="email" name="email" placeholder="Enter email address">
+
+                        <label for="year">Year:</label>
+                        <input type="text" id="year" name="year" placeholder="Enter year">
+
+                        <label for="tags">Tags:</label>
+                        <input type="text" id="tags" name="tags" placeholder="Enter tags (e.g., Athlete, PWD)">
+                        </form>
+                        <form id="uploadForm" enctype="multipart/form-data">
+                        <label for="photoUpload" class="upload-label">Upload Photo:</label>
+                        <input type="file" id="photoUpload" accept="image/*" class="upload-input" style="display: none;" />
+                        <label for="photoUpload" class="custom-file-upload">Choose File</label>
+                        <button type="submit" class="upload-btn">Upload</button>
+                        <div id="previewContainer" class="preview-container"></div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock content %}

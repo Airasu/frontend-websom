@@ -1,6 +1,19 @@
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #333;
 }
+
+.main-container {
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* start of sidebar style */
 
 .logo {
     display: flex;
@@ -26,7 +39,7 @@ body {
 
 .username h1 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .username p {
@@ -40,25 +53,24 @@ body {
     transition: background-color 0.3s ease;
 }
 
+
+
+/* Apply flexbox to center the text and background */
+/* Apply flexbox directly to the anchor tag */
 .sidebar .nav-item a {
-    color: #505050;
-    padding: 10px 15px;
-    text-decoration: none;
     display: flex;
-    align-items: center;
-    transition: background-color 0.3s, color 0.2s ease;
-    border-radius: 20px;
+    height: 100%;
+    width: 100%;
 }
 
+/* Hover effect */
 .sidebar .nav-item a:hover {
-    background-color: #79b471;
-    border-radius: 20px;
+    background-color: #096900;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
 }
 
-.sidebar .nav-item a p {
-    margin: 0;
-    transition: color 0.2s ease;
-}
 
 .logo-header {
     background-color: #fafafa;
@@ -67,6 +79,7 @@ body {
 
 .sidebar .nav-item a .sub-item {
     transition: color 0.2s ease;
+
 }
 
 .sidebar .nav-item a:hover .sub-item {
@@ -77,11 +90,628 @@ body {
     padding-left: 15px;
 }
 
-.sidebar .nav-item p {
-    color: #5c5c5c;
-}
 
 
 .sidebar .nav-item p:hover {
     color: #ffffff
+}
+
+
+.sidebar_minimize.sidebar_minimize_hover .sidebar {
+    width: 265px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+}
+
+.sidebar_minimize.sidebar_minimize_hover .sidebar .logo-header {
+    width: 265px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+}
+
+/*end of sidebar style */
+
+
+
+/*start of member list style */
+
+.title_page {
+    color: #414141;
+    margin-top: 1em;
+}
+
+.member-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #d8d8d8;
+    /* Added solid border style and width */
+    margin: auto;
+    max-width: 100%;
+}
+
+.members-header {
+    margin-bottom: 20px;
+}
+
+.members-list {
+    font-size: 24px;
+    color: #3d3d3d;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    margin-right: 20px;
+    /* Space between title and search */
+}
+
+.card-body tbody td {
+    text-align: center;
+}
+
+.card-body thead th {
+    font-size: 14px;
+    color: #181818;
+    font-weight: 600;
+    text-align: center;
+}
+
+.add-button-container {
+    position: relative;
+    height: 1em;
+    /* Increased height */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.add-btn {
+    background-color: #076902;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px 2px;
+    /* Adjusted padding for better appearance */
+    width: 10em;
+    border-radius: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    margin-top: -3.8em;
+    /* Added margin to position button higher */
+    /* Removed "px" for z-index value */
+}
+
+.action-button:hover {
+    color: #096900;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #969696;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+/*end of member list style */
+
+
+/* start of filter function style */
+
+.filter-items {
+    display: block;
+    /* Show by default */
+}
+
+.filter-items.hidden {
+    display: none;
+    /* Hide when minimized */
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    justify-content: end;
+}
+
+.dropdown {
+    position: relative;
+    flex: 1;
+    min-width: 100px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background-color: #ffffff;
+    /* Light background */
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show on hover */
+}
+
+/* Styles for dropdown menu items */
+.dropdown-menu label {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* Ensure this has a pointer cursor */
+}
+
+
+
+.dropdown label {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+.filter-container {
+    margin-bottom: 40px;
+    margin-top: 1px;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #d8d8d8;
+    /* Added solid border style and width */
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.filter p {
+    margin-bottom: 1px;
+    font-size: 24px;
+    color: #3d3d3d;
+}
+
+.filter-label {
+    color: #096900;
+}
+
+
+.filter-items {
+    display: flex;
+    gap: 50px;
+}
+
+.att-sortby {
+    display: flex;
+    /* Flexbox for horizontal alignment */
+    background-color: #ffffff;
+    margin-left: 5px;
+    border-radius: 8px;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.att-sortby p {
+    margin-right: 20px;
+    font-weight: 300;
+}
+
+.apply-button {
+    align-self: center;
+    margin-left: auto;
+}
+
+.apply-btn {
+    background-color: #076902;
+    /* Green background */
+    color: rgb(248, 248, 248);
+    /* White text */
+    text-align: center;
+    border: none;
+    padding: 3px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.apply-btn:hover {
+    background-color: #096900;
+    /* Darker green on hover */
+}
+
+/* start of search function */
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Align to the right */
+    align-items: center;
+    /* Center vertically */
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.search-box {
+    padding: 5px 0px 5px 20px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box:focus {
+    border-color: #0e9901;
+}
+
+.search-button {
+    padding: 5px 20px;
+    border: none;
+    background-color: #929292;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+}
+
+.search-button:hover {
+    background-color: #8a8a8a;
+}
+
+
+/* add member style */
+
+
+.add-member h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #0e9901;
+
+}
+
+.add-member-container {
+    margin-bottom: 40px;
+    margin-top: 1px;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #d8d8d8;
+    /* Added solid border style and width */
+}
+
+.member-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.member-forms input[type="text"] {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.submit-btn {
+    background-color: #076902;
+    color: #fff;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+.submit-btn:hover {
+    background-color: #0e9901;
+}
+
+/* upload photo in add member feature */
+.upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.upload-input {
+    margin-bottom: 10px;
+}
+
+.preview-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+.upload-btn {
+    padding: 5px 20px;
+    border: none;
+    background-color: #d8d8d8;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid #c4c4c4;
+}
+
+.upload-btn:hover {
+    background-color: #c4c3c3;
+    /* Darker green on hover */
+}
+
+.upload-btn:disabled {
+    background-color: #ccc;
+    /* Gray background when disabled */
+    cursor: not-allowed;
+    /* Not allowed cursor */
+}
+
+.custom-file-upload {
+    padding: 5px 20px;
+    border: none;
+    background-color: #d8d8d8;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid #c4c4c4;
+}
+
+.custom-file-upload:hover {
+    background-color: #c4c3c3;
+    /* Darker green on hover */
+}
+
+/* Add card popup style */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup box */
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup header */
+.popup-header {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Textbox */
+.popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Scan indication */
+.scan-indication {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Confirm button */
+.confirm-btn {
+    background-color: #076902;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Close button */
+.close-btn {
+    background-color: #ccc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.open-popup-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card-btn {
+    background-color: #076902;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px 2px;
+    /* Adjusted padding for better appearance */
+    width: 15em;
+    border-radius: 16px;
+    margin-bottom: 1em;
+
+}
+
+
+/* Mass reactivation popup */
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    /* Make sure it appears on top of everything */
+}
+
+
+.mass-reactivate-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    /* Ensures the popup itself is above other content */
+}
+
+.popup-header {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.popup-body {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.popup-actions {
+    display: block;
+    justify-content: space-around;
+}
+
+
+.confirm-btn {
+    background-color: #076902;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close-btn {
+    background-color: #ccc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upload-input {
+    margin-top: 10px;
+}
+
+/* Mass reactivate page */
+.mass-btn {
+    background-color: #85140c;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px 2px;
+    /* Adjusted padding for better appearance */
+    width: 15em;
+    border-radius: 16px;
+    margin-bottom: 1em;
+
+
+}
+
+.confirm-btn2 {
+    background-color: #076902;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px 2px;
+    /* Adjusted padding for better appearance */
+    width: 10em;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: 2em;
+
+
+}
+
+.cancel-btn2 {
+    background-color: #929292;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px 2px;
+    /* Adjusted padding for better appearance */
+    width: 10em;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: .5em;
+    display: block;
 }

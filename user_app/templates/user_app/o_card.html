@@ -1,0 +1,196 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<head>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container"> <!-- Container for the entire content -->
+    <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+      <div class="page-inner">
+        <div class="page-category">
+          <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+            <div class="page-inner">
+              <div class="title_page">
+                <h1>Membership Cards</h1>
+            <div id="popupOverlay" class="overlay">
+                <div class="popup">
+                    <div class="popup-header">Add Card for <strong>*Name*</strong></div>
+                    <div class="scan-indication">Scan card or enter card number below:</div>
+                    <input type="text" class="popup-input" placeholder="Enter card number">
+                    <button class="confirm-btn">Confirm</button>
+                    <button class="close-btn" onclick="closePopup()">Close</button>
+                </div>
+              </div>
+              <div class="filter-container">
+                <div class="filter">
+                  <p> Filter</p>
+                    <div class="filter-items">
+                        <div class="year dropdown">
+                            <label class="filter-label" for="year">Semester:</label>
+                            <div class="dropdown-toggle">
+                                <span>Select semester</span>
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <label><input type="checkbox" value="1st"> 1st sem</label>
+                                <label><input type="checkbox" value="2nd"> 2nd sem</label>
+                            </div>
+                        </div>
+                        <div class="sex dropdown">
+                            <label class="filter-label" for="sex">Sex:</label>
+                            <div class="dropdown-toggle">
+                                <span>Select sex</span>
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <label><input type="checkbox" value="female"> Female</label>
+                                <label><input type="checkbox" value="male"> Male</label>
+                            </div>
+                        </div>
+                        <div class="tags dropdown">
+                            <label class="filter-label" for="tags">Tags:</label>
+                            <div class="dropdown-toggle">
+                                <span>Select tags</span>
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <label><input type="checkbox" value="athlete"> Athlete</label>
+                                <label><input type="checkbox" value="pwd"> PWD</label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+                <!-- Sort By Section -->
+                <div class="att-sortby">
+                  <p>Sort By:</p>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortOrder" id="sortAZ" value="az">
+                    <label class="form-check-label" for="sortAZ">A-Z</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortOrder" id="sortZA" value="za" checked>
+                    <label class="form-check-label" for="sortZA">Z-A</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortOrder" id="sortDate" value="date">
+                    <label class="form-check-label" for="sortDate">Date</label>
+                  </div>
+                </div>
+                  <div class="apply-button">
+                    <button type="button" class="apply-btn">Apply</button>
+                  </div>
+              </div>
+
+                <!-- Members table section -->
+              <div class="members">
+                <div class="member-container">
+                  <div class="search-container">
+                  <form action="/search" method="GET">
+                    <input type="text" placeholder="Search..." name="query" class="search-box">
+                    <button type="submit" class="search-button">Search</button>
+                  </form>
+                  </div>
+                    <div class="card-body">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Student No.</th>
+                            <th scope="col">v/x</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>
+                              <button class="card-btn" onclick="openPopup()">Add Card</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>
+                              <button class="card-btn" onclick="openPopup()">Add Card</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>
+                              <button class="card-btn" onclick="openPopup()">Add Card</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>
+                              <button class="card-btn" onclick="openPopup()">Add Card</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>
+                              <button class="card-btn" onclick="openPopup()">Add Card</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                        // Open popup function
+                function openPopup() {
+                    document.getElementById("popupOverlay").style.display = "flex";
+                }
+
+                // Close popup function
+                function closePopup() {
+                    document.getElementById("popupOverlay").style.display = "none";
+                }
+                document.querySelectorAll('.edit-button').forEach(button => {
+                  button.addEventListener('click', () => {
+                    const row = button.closest('tr');
+                    const username = row.children[0].innerText;
+                    alert(`Edit member: ${username}`);
+                  });
+                });
+
+                document.querySelectorAll('.delete-button').forEach(button => {
+                  button.addEventListener('click', () => {
+                    const row = button.closest('tr');
+                    const username = row.children[0].innerText;
+                    if (confirm(`Are you sure you want to delete ${username}?`)) {
+                      row.remove();
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock content %}

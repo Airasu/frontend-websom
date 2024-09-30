@@ -1,17 +1,216 @@
 {% extends "index.html" %}
 {% load static %}
 {% block content %}
+<head>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
+<body>
+  <div class="main-container"> <!-- Container for the entire content -->
+    <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+      <div class="page-inner">
+        <div class="page-category">
+          <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+            <div class="page-inner">
+              <div class="title_page">
+                <h1>Membership Cards</h1>
+              </div>
+              <div class="filter-container">
+                <div class="filter">
+                  <p> Filter</p>
+                    <div class="filter-items">
+                        <div class="year dropdown">
+                            <label class="filter-label" for="year">Tags:</label>
+                            <div class="dropdown-toggle">
+                                <span>Select tags</span>
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <label><input type="checkbox" value="1st"> Tag 1</label>
+                                <label><input type="checkbox" value="2nd"> Tag 2</label>
+                            </div>
+                        </div>
+                        <div class="sex dropdown">
+                            <label class="filter-label" for="sex">Status:</label>
+                            <div class="dropdown-toggle">
+                                <span>Select status</span>
+                                <i class="arrow down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <label><input type="checkbox" value="female"> Pending</label>
+                                <label><input type="checkbox" value="male"> Reactivate</label>
+                                <label><input type="checkbox" value="male"> Suspended</label>
+                                <label><input type="checkbox" value="male"> Alumni</label>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
 
-{% block title %}Reactivate Members{% endblock %}
+                    <!-- Sort By Section -->
+                    <div class="att-sortby">
+                    <p>Sort By:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sortOrder" id="sortAZ" value="az">
+                        <label class="form-check-label" for="sortAZ">A-Z</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sortOrder" id="sortZA" value="za" checked>
+                        <label class="form-check-label" for="sortZA">Z-A</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sortOrder" id="sortDate" value="date">
+                        <label class="form-check-label" for="sortDate">Date</label>
+                    </div>
+                    </div>
+                    <div class="apply-button">
+                        <button type="button" class="apply-btn">Apply</button>
+                    </div>
+                </div>
 
+                <div class="pop-reactivate">
+                    <h1>Actions</h1>
+                    <button class="card-btn" onclick="openMassPopup()">Semestral Reactivation</button>
+                </div>
 
-<div class="container">
-    <h2>Upload CSV or TXT File</h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
-</div>
-{% endblock %}
+                <div class="mass_reactivate">
+                <a href="{% url 'o_mass_reactivate' %}">
+                    <button type="button" class="mass-btn">Mass Reactivate</button>
+                </a>
+              </div>
+
+                <!-- Hidden Popup for Mass Reactivation -->
+                <div id="massPopupOverlay" class="popup-overlay" style="display: none;">
+                    <div class="mass-reactivate-popup">
+                        <div class="popup-header">
+                            <h2>WARNING</h2>
+                        </div>
+                        <div class="popup-body">
+                            <!-- Popup Details and File Upload Form -->
+                            <p>All ACTIVE Members will be tagged REACTIVATE</p>
+                            <form id="massReactivationForm" enctype="multipart/form-data">
+                                <label for="code">Enter code:  </label>
+                                <input type="text" id="code" name="code">
+                            </form>
+                        </div>
+                        <div class="popup-actions">
+                            <!-- Confirm and Close Buttons -->
+                            <button type="button" class="confirm-btn" onclick="submitMassReactivation()">Confirm</button>
+                            <button type="button" class="close-btn" onclick="closeMassPopup()">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Members table section -->
+              <div class="members">
+                <div class="member-container">
+                  <div class="search-container">
+                  <form action="/search" method="GET">
+                    <input type="text" placeholder="Search..." name="query" class="search-box">
+                    <button type="submit" class="search-button">Search</button>
+                  </form>
+                  </div>
+                  <div class="Members">
+                    <div class="members-header">
+                      <div class="members-list">Members List</div>
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Full name</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Student No.</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Actions</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Activate</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mark John As</td>
+                            <td>Markss</td>
+                            <td>2021-8-0210</td>
+                            <td>3rd year</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Markxx</td>
+                            <td>Mark John As</td>
+                            <td>2021-8-0210</td>
+                            <td>mark@gmail.com</td>
+                            <td>3rd year</td>
+                            <td>Athlete</td>
+                            <td>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <script>
+                // Function to open the popup
+                function openMassPopup() {
+                    document.getElementById('massPopupOverlay').style.display = 'flex';
+                }
+
+                // Function to close the popup
+                function closeMassPopup() {
+                    document.getElementById('massPopupOverlay').style.display = 'none';
+                }
+
+                // Function to handle form submission
+                function submitMassReactivation() {
+                    const fileInput = document.getElementById('csvUpload');
+                    if (fileInput.files.length === 0) {
+                        alert('Please upload a CSV file.');
+                    } else {
+                        // Perform form submission logic here (e.g., AJAX)
+                        alert('CSV uploaded successfully!');
+                        closeMassPopup(); // Close the popup after submission
+                    }
+                }
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock content %}

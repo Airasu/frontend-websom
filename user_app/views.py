@@ -63,3 +63,19 @@ class Reports(TemplateView):
 
 class Settings(TemplateView):
     template_name ="user_app/settings.html"
+
+class O_crud_member(TemplateView):
+    template_name ="user_app/o_crud_member.html"
+
+class O_crud_member2(TemplateView):
+    template_name ="user_app/o_crud_member2.html"
+
+class O_reactivate_member(TemplateView):
+    template_name ="user_app/o_reactivate_member.html"
+
+class O_card(TemplateView):
+    template_name ="user_app/o_card.html"
+
+
+class O_mass_reactivate(TemplateView):
+    template_name ="user_app/o_mass_reactivate.html"

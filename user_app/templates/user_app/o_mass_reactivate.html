@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<head>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container"> <!-- Container for the entire content -->
+    <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+      <div class="page-inner">
+        <div class="page-category">
+          <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+            <div class="page-inner">
+                <div class="title_page">
+                    <h1>Mass Reactivate</h1>
+                    <div class="content">
+                        <p> Please upload your csv file with the student number in the first column</p>
+                        <div class="file-upload-container">
+                        <h4>Upload CSV</h4>
+                        <form id="fileUploadForm" action="/upload-file/" method="POST" enctype="multipart/form-data">
+                            <input type="file" id="file" name="file" accept=".csv, .xlsx, .txt, .pdf">
+                            <br>
+                            <div class="pop-reactivate">
+                                <button class="confirm-btn2" onclick="openMassPopup()">Confirm</button>
+                            </div>
+                                <button type="cancel" class="cancel-btn2">Cancel</button>                          
+                        </form>
+                        <p id="uploadStatus"></p>
+                        </div>
+                        <div id="massPopupOverlay" class="popup-overlay" style="display: none;">
+                            <div class="mass-reactivate-popup">
+                                <div class="popup-header">
+                                    <h2>WARNING</h2>
+                                </div>
+                                <div class="popup-body">
+                                    <!-- Popup Details and File Upload Form -->
+                                    <p>All ACTIVE Members will be tagged REACTIVATE</p>
+                                    <form id="fileUploadForm" enctype="multipart/form-data">
+                                        <label for="code">Enter code:  </label>
+                                        <input type="text" id="code" name="code">
+                                    </form>
+                                </div>
+                                <div class="popup-actions">
+                                    <!-- Confirm and Close Buttons -->
+                                    <button type="button" class="confirm-btn" onclick="submitMassReactivation()">Confirm</button>
+                                    <button type="button" class="close-btn" onclick="closeMassPopup()">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock content %}
