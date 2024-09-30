@@ -8,17 +8,118 @@
         <h4 class="page-title">Dashboard</h4>
       </div>
       <div class="page-category">
-        <p>CLEARANCE PROCESSING PAGE<p>
           <div class="clearance-rec-processing-container">
             <div class="clearance-rec-processing-scanner">
-              <input type="text">Scanner</input>
+              <input type="text"></input>
             </div>
-            <div class="clearance-rec-processing-profile">
-              <input type="image"></input>
-              <p>Profile:</p>
+            <div class="clearance-rec-processing-content">
+              <div class="clearance-rec-processing-profile">
+                <img src="{% static 'images/profile.jpg' %}" alt="profile"></img>
+                <p>Profile:</p>
+                <div class="clearance-rec-processing-demographic">
+                  <p>Name: <input type="text" name="Name" id="name" placeholder="Edward Smith"></input></p>
+                  <p>Student Number: <input type="text" name="student-id" id="id" placeholder="0000-0-0000"></p>
+                  <p>Year level: <input type="text" name"year-level" id="year" placeholder="1st year"></input></p>
+                  <p>Gender: <input type="text" name"gender" id="gender" placeholder="Male"></input></p>
+                </div>
+              </div>
+              <div class="clearance-rec-processing-records">
+                <h3>Records</h3>
+                <div class="clearance-rec-processing-att-containers">
+                  <div id="clearance-att" class="clearance-rec-processing-att">
+                    <p>Attendance Results</p>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Events</th>
+                          <th>Absent</th>
+                          <th>Amount</th>
+                          <th>Sanction Fee</th>
+                          <th>Sanction Community</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th>Total:</th>
+                          <th>Total:</th>
+                          <th></th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <td>Science Month</td>
+                          <td>2</td>
+                          <td>40.00</td>
+                          <td>00.00</td>
+                          <td>30 minutes</td>
+                        </tr>
+                        <tr>
+                          <td>Science Month</td>
+                          <td>2</td>
+                          <td>40.00</td>
+                          <td>00.00</td>
+                          <td>30 minutes</td>
+                        </tr>
+                        <tr>
+                          <td>Science Month</td>
+                          <td>2</td>
+                          <td>40.00</td>
+                          <td>00.00</td>
+                          <td>30 minutes</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="org-fee-status" class="clearance-rec-processing-ogrfee">
+                  <p>Organization Fee Status</p>
+                  <p>Status: <input type="text" name="ogr-fee-status" id="org-fee-status"></p>
+                </div>
+                <div id="igp-status" class="clearance-rec-processing-igp">
+                  <p>Products</p>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Org Shirt</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>ID lace</td>
+                        <td>Paid</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="clearance-rec-processing-comply">
+              <button type="submit" class="comply-button" onclick="openPopup()"> Comply</button>
+              <div class="comply-button-pop-up" id="popup">
+                <p>Show all the records and this button indicates that the officer has confirmed the clearance of the student.</p>
+                <button type="button" onclick="closePopup()">Confirm</button>
+              </div>
             </div>
           </div>
       </div>
     </div>
   </div>
+  <script>
+    let popup = document.getElementById("popup");
+
+
+    function openPopup() {
+      popup.classList.add("open-comply-button-pop-up");
+    }
+    function closePopup() {
+      popup.classList.remove("open-comply-button-pop-up");
+    }
+  </script>
 {% endblock content %} 

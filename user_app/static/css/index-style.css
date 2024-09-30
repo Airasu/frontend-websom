@@ -1,8 +1,50 @@
+
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.avatar-lg {
+    margin-right: 10px;
+}
+
+.avatar-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.username {
+    margin-top: 12%;
+    color: #111111;
+}
+
+.username h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.username p {
+    font-size: 12px;
+    color: 111111;
+    margin-top: -10px;
+}
+button {
+    margin: 5px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
 
 .logo {
     display: flex;
@@ -160,12 +202,6 @@ body, html {
 }
 
 
-button {
-    margin: 5px;
-    border-radius: 10px;
-    background-color: green;
-    color: white;
-}
 
 .create-event-container {
     background-color: white;
@@ -570,14 +606,12 @@ button {
 /* Clearance records -Clearance- page style end */ 
 
 /* clearance records processing page style*/
-.clearance-rec-processing-scanner input {
+.clearance-rec-processing-scanner input{
     background-color: #078518;
     margin-top: 1px;
+    margin-right: 50em;
 }
 
-.clearnce-rec-processing-scanner p {
-    margin-bottom: 1px;
-}
 
 .clearance-rec-processing-container {
     background-color: white;
@@ -595,4 +629,49 @@ button {
 .clearance-rec-processing input {
     width: 20em;
     height: 10em;
+    background-color: #01a016;
+}
+
+.clearance-rec-processing-profile img {
+    width: 25em;
+    border: #111111;
+}
+
+.clearance-rec-processing-content {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    gap: 10em;
+}
+
+.clearance-rec-processing-att-container {
+    background-color: #009c27;
+}
+
+.comply-button {
+    padding: 10px 60;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.comply-button-pop-up {
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-comply-button-pop-up {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
