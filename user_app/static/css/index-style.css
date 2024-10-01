@@ -55,20 +55,16 @@ body {
 
 
 
-/* Apply flexbox to center the text and background */
-/* Apply flexbox directly to the anchor tag */
 .sidebar .nav-item a {
     display: flex;
     height: 100%;
     width: 100%;
 }
 
-/* Hover effect */
 .sidebar .nav-item a:hover {
     background-color: #096900;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    /* Smooth transition */
 }
 
 
@@ -127,7 +123,6 @@ body {
     padding: 20px;
     border-radius: 16px;
     border: 1px solid #d8d8d8;
-    /* Added solid border style and width */
     margin: auto;
     max-width: 100%;
 }
@@ -141,9 +136,7 @@ body {
     color: #3d3d3d;
     display: flex;
     align-items: center;
-    /* Center vertically */
     margin-right: 20px;
-    /* Space between title and search */
 }
 
 .card-body tbody td {
@@ -160,11 +153,9 @@ body {
 .add-button-container {
     position: relative;
     height: 1em;
-    /* Increased height */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Center items vertically */
 }
 
 .add-btn {
@@ -173,15 +164,13 @@ body {
     border: none;
     font-size: 14px;
     padding: 5px 2px;
-    /* Adjusted padding for better appearance */
     width: 10em;
     border-radius: 16px;
     cursor: pointer;
     position: absolute;
     right: 0px;
     margin-top: -3.8em;
-    /* Added margin to position button higher */
-    /* Removed "px" for z-index value */
+
 }
 
 .action-button:hover {
@@ -204,12 +193,10 @@ body {
 
 .filter-items {
     display: block;
-    /* Show by default */
 }
 
 .filter-items.hidden {
     display: none;
-    /* Hide when minimized */
 }
 
 .toggle-button {
@@ -235,7 +222,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 16px;
     background-color: #ffffff;
-    /* Light background */
     cursor: pointer;
 }
 
@@ -256,7 +242,6 @@ body {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    /* Show on hover */
 }
 
 /* Styles for dropdown menu items */
@@ -264,7 +249,6 @@ body {
     display: block;
     padding: 5px 10px;
     cursor: pointer;
-    /* Ensure this has a pointer cursor */
 }
 
 
@@ -287,7 +271,6 @@ body {
     background-color: white;
     border-radius: 16px;
     border: 1px solid #d8d8d8;
-    /* Added solid border style and width */
 }
 
 .filter {
@@ -314,12 +297,10 @@ body {
 
 .att-sortby {
     display: flex;
-    /* Flexbox for horizontal alignment */
     background-color: #ffffff;
     margin-left: 5px;
     border-radius: 8px;
     align-items: center;
-    /* Center items vertically */
 }
 
 .att-sortby p {
@@ -334,9 +315,7 @@ body {
 
 .apply-btn {
     background-color: #076902;
-    /* Green background */
     color: rgb(248, 248, 248);
-    /* White text */
     text-align: center;
     border: none;
     padding: 3px 30px;
@@ -348,7 +327,6 @@ body {
 
 .apply-btn:hover {
     background-color: #096900;
-    /* Darker green on hover */
 }
 
 /* start of search function */
@@ -356,9 +334,7 @@ body {
 .search-container {
     display: flex;
     justify-content: flex-end;
-    /* Align to the right */
     align-items: center;
-    /* Center vertically */
     border-radius: 16px;
     padding: 10px;
 }
@@ -411,7 +387,6 @@ body {
     background-color: white;
     border-radius: 16px;
     border: 1px solid #d8d8d8;
-    /* Added solid border style and width */
 }
 
 .member-forms {
@@ -485,14 +460,11 @@ body {
 
 .upload-btn:hover {
     background-color: #c4c3c3;
-    /* Darker green on hover */
 }
 
 .upload-btn:disabled {
     background-color: #ccc;
-    /* Gray background when disabled */
     cursor: not-allowed;
-    /* Not allowed cursor */
 }
 
 .custom-file-upload {
@@ -508,7 +480,6 @@ body {
 
 .custom-file-upload:hover {
     background-color: #c4c3c3;
-    /* Darker green on hover */
 }
 
 /* Add card popup style */
@@ -534,13 +505,11 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Popup header */
 .popup-header {
     font-size: 18px;
     margin-bottom: 15px;
 }
 
-/* Textbox */
 .popup-input {
     width: 100%;
     padding: 10px;
@@ -549,14 +518,12 @@ body {
     border-radius: 4px;
 }
 
-/* Scan indication */
 .scan-indication {
     margin-bottom: 15px;
     font-size: 14px;
     color: #555;
 }
 
-/* Confirm button */
 .confirm-btn {
     background-color: #076902;
     color: white;
@@ -568,7 +535,6 @@ body {
     font-size: 14px;
 }
 
-/* Close button */
 .close-btn {
     background-color: #ccc;
     color: white;
@@ -595,10 +561,10 @@ body {
     border: none;
     font-size: 14px;
     padding: 5px 2px;
-    /* Adjusted padding for better appearance */
     width: 15em;
     border-radius: 16px;
     margin-bottom: 1em;
+
 
 }
 
@@ -615,7 +581,6 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999;
-    /* Make sure it appears on top of everything */
 }
 
 
@@ -627,7 +592,6 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1001;
-    /* Ensures the popup itself is above other content */
 }
 
 .popup-header {
@@ -674,12 +638,11 @@ body {
 
 /* Mass reactivate page */
 .mass-btn {
-    background-color: #85140c;
+    background-color: #076902;
     color: white;
     border: none;
     font-size: 14px;
     padding: 5px 2px;
-    /* Adjusted padding for better appearance */
     width: 15em;
     border-radius: 16px;
     margin-bottom: 1em;
@@ -693,7 +656,6 @@ body {
     border: none;
     font-size: 14px;
     padding: 5px 2px;
-    /* Adjusted padding for better appearance */
     width: 10em;
     border-radius: 16px;
     cursor: pointer;
@@ -708,10 +670,32 @@ body {
     border: none;
     font-size: 14px;
     padding: 5px 2px;
-    /* Adjusted padding for better appearance */
     width: 10em;
     border-radius: 16px;
     cursor: pointer;
     margin-top: .5em;
     display: block;
+}
+
+.masspopup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(189, 13, 13, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 999;
+}
+
+.mass-reactivate-popup2 {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
 }

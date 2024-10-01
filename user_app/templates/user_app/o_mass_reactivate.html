@@ -6,11 +6,11 @@
 </head>
 
 <body>
-  <div class="main-container"> <!-- Container for the entire content -->
-    <div class="container-fluid">  <!-- Use container-fluid to take up full width -->
+  <div class="main-container"> 
+    <div class="container-fluid"> 
       <div class="page-inner">
         <div class="page-category">
-          <div class="container-fluid"> <!-- Ensure the container stretches fully -->
+          <div class="container-fluid">
             <div class="page-inner">
                 <div class="title_page">
                     <h1>Mass Reactivate</h1>
@@ -22,32 +22,30 @@
                             <input type="file" id="file" name="file" accept=".csv, .xlsx, .txt, .pdf">
                             <br>
                             <div class="pop-reactivate">
-                                <button class="confirm-btn2" onclick="openMassPopup()">Confirm</button>
+                                <button type="button" class="confirm-btn2" onclick="openMassPopup()">Confirm</button>
                             </div>
-                                <button type="cancel" class="cancel-btn2">Cancel</button>                          
+                            <button type="button" class="cancel-btn2">Cancel</button>                          
                         </form>
                         <p id="uploadStatus"></p>
                         </div>
-                        <div id="massPopupOverlay" class="popup-overlay" style="display: none;">
-                            <div class="mass-reactivate-popup">
+
+                        <!-- Popup Overlay for Mass Reactivation -->
+                        <div id="massPopupOverlay" class="masspopup-overlay" style="display: none;">
+                            <div class="mass-reactivate-popup2">
                                 <div class="popup-header">
                                     <h2>WARNING</h2>
                                 </div>
                                 <div class="popup-body">
-                                    <!-- Popup Details and File Upload Form -->
-                                    <p>All ACTIVE Members will be tagged REACTIVATE</p>
-                                    <form id="fileUploadForm" enctype="multipart/form-data">
-                                        <label for="code">Enter code:  </label>
-                                        <input type="text" id="code" name="code">
-                                    </form>
+                                    <p>No. of members reactivated</p>
+                                    <p>No. of failed reactivation</p>
                                 </div>
                                 <div class="popup-actions">
-                                    <!-- Confirm and Close Buttons -->
                                     <button type="button" class="confirm-btn" onclick="submitMassReactivation()">Confirm</button>
                                     <button type="button" class="close-btn" onclick="closeMassPopup()">Close</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- End Popup Overlay -->
                     </div>
                 </div>
             </div>
@@ -56,6 +54,29 @@
       </div>
     </div>
   </div>
-</body>
 
+  <!-- JavaScript for Pop-up and Popup Handling -->
+  <script>
+    // Function to open the mass reactivation popup
+    function openMassPopup() {
+      document.getElementById('massPopupOverlay').style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closeMassPopup() {
+      document.getElementById('massPopupOverlay').style.display = 'none';
+    }
+
+    // Function to handle the submission of mass reactivation
+    function submitMassReactivation() {
+      const code = document.getElementById('code').value;
+      if (code) {
+        alert('Mass reactivation confirmed with code: ' + code);
+        closeMassPopup();
+      } else {
+        alert('Please enter a valid code.');
+      }
+    }
+  </script>
+</body>
 {% endblock content %}
