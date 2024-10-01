@@ -607,9 +607,10 @@ button {
 
 /* clearance records processing page style*/
 .clearance-rec-processing-scanner input{
-    background-color: #078518;
     margin-top: 1px;
     margin-right: 50em;
+    border-radius: 5px;
+    height: 40px;
 }
 
 
@@ -629,7 +630,6 @@ button {
 .clearance-rec-processing input {
     width: 20em;
     height: 10em;
-    background-color: #01a016;
 }
 
 .clearance-rec-processing-profile img {
@@ -654,11 +654,13 @@ button {
     cursor: pointer;
     font-size: 15px;
     font-weight: 500;
+    margin-left: 65em;
+    margin-top: 5em;
 }
 
 .comply-button-pop-up {
     width: 400px;
-    background-color: white;
+    background-color: rgb(173, 212, 173);
     border-radius: 6px;
     position: absolute;
     top: 50%;
@@ -674,4 +676,9 @@ button {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
+}
+
+.clearance-rec-processing-att h5, .clearance-rec-processing-orgfee h5, .clearance-rec-processing-igp h5 {
+    font-weight: bold;
+    margin-top: 3em;
 }
